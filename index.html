@@ -21,7 +21,7 @@
             background-image: url(walking.png);
             width: 256px;
             height: 314px;
-            animation: move 1s steps(8) infinite;
+            animation: move 1s steps(8) infinite, walk 5s linear infinite alternate;
         }
 
         @keyframes move {
@@ -31,6 +31,18 @@
 
             100% {
                 background-position: -2048px 0;
+            }
+        }
+
+        @keyframes walk {
+            0% {
+                top: calc(50% - 157px);
+                left: 0;
+            }
+
+            100% {
+                top: calc(50% - 157px);
+                left: calc(100% - 256px);
             }
         }
     </style>
